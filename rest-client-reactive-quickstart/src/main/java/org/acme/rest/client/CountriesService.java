@@ -16,14 +16,5 @@ public interface CountriesService {
 
     @GET
     @Path("/name/{countryName}")
-    Set<Country> getByName(String countryName);
-
-
-    @GET
-    @Path("/name/{countryName}")
-    CompletionStage<Set<Country>> getByNameAsync(String countryName);
-
-    @GET
-    @Path("/name/{countryName}")
-    Uni<Set<Country>> getByNameAsUni(String countryName);
+    Uni<Country> getByNameAsUni(String countryName);
 }
